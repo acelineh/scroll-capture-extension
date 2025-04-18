@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Scroll Capture Extension",
+  "version": "1.0",
+  "description": "完整截取內嵌 scroll 區塊畫面",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "擷取 scroll 區塊"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["html2canvas.min.js", "logic.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
